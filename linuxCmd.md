@@ -10,10 +10,10 @@ wc -l file1.txt file2.txt #分别显示文件行数，最后显示总行数
 ```
 #### grep: *查找满足条件的文件*
 ```
-grep wc file.txt #查找file.txt中不包括关键词wc的行并打印出来
-grep -n wc file.txt #查找file.txt中不包括关键词wc的行并打印出行号和行内容
+grep wc file.txt #查找file.txt中包括关键词wc的行并打印出来
+grep -n wc file.txt #查找file.txt中包括关键词wc的行并打印出行号和行
 grep -i WC file.txt #不区分大小写
-grep -v wc file.txt #查找file.txt中包括关键词wc的行并打印出来
+grep -v wc file.txt #查找file.txt中不包括关键词wc的行并打印出来
 grep -r wc dev/data #递归查找dev/data路径中包含wc的文件并打印出包括wc的行
 
 ```
