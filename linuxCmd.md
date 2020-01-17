@@ -21,14 +21,21 @@ grep -r wc dev/data #递归查找dev/data路径中包含wc的文件并打印出�
 ```
 find . -name "*.md"  #从当前目录开始查找所有扩展名为md的文件 
 ```
-#### source
+
+## 磁盘管理
+#### cd: *切换工作目录*
+```
+cd /  #进入根目录，所有跟在/后面的为绝对路径
+cd或cd~或cd $HOME  #进入当前用户主目录
+cd -  #切换到上一个工作目录
+
+```
+#### 检查磁盘使用情况：df -sh
+#### 检查某个目录下的磁盘使用情况： du -sh <directory>
 
 
-## 内存磁盘管理
-
+## 系统管理
 * 检查内存使用情况：free -h
-* 检查磁盘使用情况：df -sh
-* 检查某个目录下的磁盘使用情况： du -sh <directory>
 * top/htop
 
 ## 进程管理
@@ -40,6 +47,8 @@ find . -name "*.md"  #从当前目录开始查找所有扩展名为md的文件
 
 * groupadd/useradd/newgrp/chown/chmod
 
-## 其他
+## 其他设置
 
 * export
+* source
+* service
