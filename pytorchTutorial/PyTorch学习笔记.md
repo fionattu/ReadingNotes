@@ -7,3 +7,4 @@ pytorch为动态图，意思是边建立**计算图**边进行运算。Tensorflo
 
 ## 机器学习模型训练步骤
 
+![avatar][raw.githubusercontent.com/fionattu/ReadingNotes/master/pytorchTutorial/pics/training_step.png]
