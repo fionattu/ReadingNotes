@@ -24,7 +24,6 @@ with io.BytesIO(uploaded['node.txt']) as f:
 ### Import from google drive 
 
 ```
-# Code to read file from google drive into Colaboratory:
 !pip install -U -q PyDrive
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
@@ -39,15 +38,17 @@ drive = GoogleDrive(gauth)
 ```
 运行上述代码后，需要打开notebook下方的链接复制验证码，然后粘贴到输入框。这时候colab已经和我们的google账户建立连接了。
 
-在google drive里，选择数据文件，点击共享文件，得到文件的共享链接，拿到链接中的id序列，如下述，随后对数据进行正常读取(下列用txt文件为例)：
+在google drive里，选择数据文件，点击共享文件，得到文件的共享链接，拿到链接中的id序列，如下述:
 
 ```
 link = "https://drive.google.com/file/d/11V-rt_meXkOMnRGbE6LG8-YA98ab7pvi/view?usp=sharing"
-
 downloaded = drive.CreateFile({'id':"18V-rt_meXkOMmRGbE6LG8-YF97dg7pvi"}) 
-
 downloaded.GetContentFile('node.txt')  
+```
 
+随后对数据进行正常读取:
+
+```
 with open('node.txt', 'r') as f:
   for line in f:
     print(line)
