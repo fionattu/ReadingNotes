@@ -10,7 +10,7 @@ b = 'b'
 print("print {} after {}".format(a, b))
 ```
 
-### 输出格式：
+### 数字格式约束：
 
 [参考链接](https://pyformat.info)。
 
@@ -36,7 +36,7 @@ print("print {:06.2f}".format(a)) # 003.14
 ```
 
 
-## list + 负index
+## list + 负号
 
 **在list索引中看到负数-a，自动变成len(x)-a来解读。**
 
@@ -111,10 +111,12 @@ with open('data.txt', 'r') as f:
 ```
 
 
-## 下划线
+## 下划线在python中的含义
 
 
-## list slicing
+## list
+
+https://coderwall.com/p/rcmaea/flatten-a-list-of-lists-in-one-line-in-python
 
 
 
