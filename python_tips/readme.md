@@ -110,6 +110,12 @@ with open('data.txt', 'r') as f:
 		input, _, _, label = line.split(',') # 只需要第1,4列
 ```
 
+## 操作符
+
+```
+y = x ** 2 # x的平方
+y = x // 2 # x/2的round down
+```
 
 ## 下划线在python中的含义
 
