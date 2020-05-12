@@ -52,11 +52,11 @@ torch.Size([4, 1])
 
 ```
 emissions = torch.tensor([[0.1, 0.2, 0.7], 
-						  [0.4, 0.5, 0.1], 
-					   	  [0.3, 0.4, 0.3],
-						  [0.5, 0.4, 0.1]])
+		  [0.4, 0.5, 0.1], 
+	   	  [0.3, 0.4, 0.3],
+		  [0.5, 0.4, 0.1]])
 								
-# 四个词对应的真实tag_id分别为[0,1,2,2]	
+# 四个词对应的真实tag_id分别为[0, 1, 2, 2]	
 tags = torch.tensor([0, 1, 2, 2]).unsqueeze(1)
 
 # 在dim=1进行gather，意思是tags中的数字作为dim=1, 
@@ -77,9 +77,9 @@ e_scores = emissions.gather(1, tags).squeeze()
 
 ```
 emissions = torch.tensor([[0.1, 0.2, 0.7],
-						  [0.4, 0.5, 0.1],
-					   	  [0.3, 0.4, 0.3],
-						  [0.5, 0.4, 0.1]])
+			  [0.4, 0.5, 0.1],
+		   	  [0.3, 0.4, 0.3],
+			  [0.5, 0.4, 0.1]])
 
 tags = torch.tensor([3, 2, 0]).view(1, 3)
 e_scores = emissions.gather(0, tags)
