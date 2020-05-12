@@ -1,3 +1,49 @@
+## unsqeeze / squeeze
+
+unsqueeze在指定的维度添加维度1， 并且返回一个新的tensor。具体使用是在进行tensor之间的操作时保持维度一致。
+
+例如，我们首先新建一个只有4个元素的**一维tensor**：
+
+```
+x = torch.tensor([1, 2, 3, 4])
+print(x.shape)
+
+结果: 
+torch.Size([4])
+tensor([[1, 2, 3, 4]])
+```
+
+在dim=0对x进行unsqueeze:
+
+```
+y = x.unsqueeze(0)
+print(y)
+print(y.shape)
+
+结果:
+tensor([[1, 2, 3, 4]]) # 类比于list of list， 纵向扩展了一个维度
+torch.Size([1, 4])
+```
+在dim=1对x进行unsqueeze:
+
+```
+z = x.unsqueeze(1)
+print(z)
+print(z.shape)
+
+结果：
+tensor([[1],
+        [2],
+        [3],
+        [4]])
+torch.Size([4, 1]) 
+```
+
+而squeeze则把所有1的维度去掉。y.squeeze()和z.squeeze()会和x相同。
+
+以上的运用可以参考gather。
+
+
 ## gather
 
 经过softmax层后，所有label的分数可以看成一个分布，有时候我们需要得到真实的label所对应的分数，然后计算loss。比如在bilstm_crf的， 我们想要计算emission score。
