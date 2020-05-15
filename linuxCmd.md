@@ -75,3 +75,6 @@ ping baidu.com # 测试域名主机是否正常工作
 * export
 * source
 * service
+* nohup
+* 操作符&&
+* cp -r a1 a2  vs. cp -r a1/ a2
